@@ -1,0 +1,110 @@
+/* CSS Variables for Theme Management */
+:root {
+  --primary: #1976d2;
+  --secondary: #757575;
+  --accent: #ff4081;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --text-primary: #282c34;
+  --border-color: #e9ecef;
+}
+
+.App {
+  text-align: center;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: var(--primary);
+  color: white;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.game-title {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.status {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  color: var(--secondary);
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.square {
+  background: var(--bg-secondary);
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  height: 80px;
+  padding: 0;
+  text-align: center;
+  width: 80px;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: var(--primary);
+}
+
+.square:hover {
+  background: var(--bg-primary);
+  border-color: var(--accent);
+}
+
+.footer {
+  margin-top: auto;
+  padding: 1rem;
+  background-color: var(--bg-secondary);
+}
+
+.restart-button {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.restart-button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.winning-line {
+  background-color: var(--accent);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .board {
+    max-width: 250px;
+  }
+  
+  .square {
+    height: 70px;
+    width: 70px;
+    font-size: 2rem;
+  }
+  
+  .game-title {
+    font-size: 1.5rem;
+  }
+}
